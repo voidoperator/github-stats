@@ -1,35 +1,33 @@
-# Readme Stats for Github 📈
+# Readme Github Stats 📈
 
-👀 Update: Whole project is rewritten with Typescript in 30 minutes on GitHub Codespaces. 💪
+## Features 🌟
 
-## Features 🪶
-
-- Totally accurate result
-- Refresh result in 1800 seconds
-- Support customization
+- Accurate result
+- Refresh rate of 1800 seconds
+- Supports customization
 
 ## API 🚀
 
-1. Cool and Simple 😃
+1. Simple & Minimalistic 😃
 
    ```
    https://github-stats-alpha.vercel.app/api?username={your-github-username}
    ```
 
-   [![Example](https://github-stats-alpha.vercel.app/api?username=tuhinpal "Example")](https://github-stats-alpha.vercel.app/api?username=tuhinpal "Example")
+   [![Example](https://github-stats-vz.vercel.app/api?username=voidoperator "Example")](https://github-stats-vz.vercel.app/api?username=voidoperator "Example")
 
 2. With Customization 😎
 
    ```
-   https://github-stats-alpha.vercel.app/api?username={your-github-username}&cc=000&tc=fff&ic=fff&bc=000
+   https://github-stats-vz.vercel.app/api?username={your-github-username}&cc=22272E&tc=37BCF6&bc=transparent&ic=30D5C8
 
-   Where cc = Card Color
-         tc = Text Color
-         ic = Icon Color
-         bc = Border Color
+   Query Options cc = Card Color
+                 tc = Text Color
+                 ic = Icon Color
+                 bc = Border Color
    ```
 
-   [![Example](https://github-stats-alpha.vercel.app/api?username=tuhinpal&cc=000&tc=fff&ic=fff&bc=000 "Example")](https://github-stats-alpha.vercel.app/api?username=tuhinpal&cc=000&tc=fff&ic=fff&bc=000 "Example")
+   [![Example](https://github-stats-vz.vercel.app/api?username=voidoperator&cc=22272E&tc=37BCF6&bc=transparent&ic=30D5C8 "Example")](https://github-stats-vz.vercel.app/api?username=voidoperator&cc=22272E&tc=37BCF6&bc=transparent&ic=30D5C8 "Example")
 
 ## Deploy your own 🦉
 
@@ -42,13 +40,9 @@
 
 ## Credits 🙏
 
-- Idea from [github-readme-stats](https://github.com/anuraghazra/github-readme-stats "github-readme-stats") by [Anurag Hazra](https://github.com/anuraghazra "Anurag Hazra")
-
-## Contribution 💬
-
-Contributors are welcome. Please open an issue or pull request if you have any suggestions.
+- Forked from [github-readme-stats](https://github.com/tuhinpal/readme-stats-github "github-readme-stats") by [Tuhinpal](https://github.com/tuhinpal/readme-stats-github "Tuhinpal")
+- Original idea from [github-readme-stats](https://github.com/anuraghazra/github-readme-stats "github-readme-stats") by [Anurag Hazra](https://github.com/anuraghazra "Anurag Hazra")
 
 ## License & Copyright 📝
 
-- This Project is [Apache-2.0](https://github.com/tuhinpal/readme-stats-github/blob/main/LICENSE) Licensed
-- Copyright 2021 by [Tuhin Kanti Pal](https://github.com/tuhinpal)
+- Fork license: [Apache-2.0](https://github.com/tuhinpal/readme-stats-github/blob/main/LICENSE)
