@@ -1,16 +1,13 @@
-import axios from "axios";
-import getRandomToken from "./getRandomToken";
+import axios from 'axios';
+import getRandomToken from './getRandomToken';
 
 export interface User {
   name: string;
   login: string;
   avatarUrl: string;
+  email: string;
   repositories: Repositories;
-  followers: Followers;
-  following: Following;
   contributionsCollection: ContributionsCollection;
-  openedIssues: OpenedIssues;
-  closedIssues: ClosedIssues;
 }
 
 export interface Repositories {
@@ -28,6 +25,11 @@ export interface Following {
 export interface ContributionsCollection {
   totalCommitContributions: number;
   restrictedContributionsCount: number;
+  total_contributions: number;
+  totalPullRequestContributions: number;
+  totalRepositoryContributions: number;
+  totalRepositoriesWithContributedPullRequests: number;
+  totalRepositoriesWithContributedCommits: number;
 }
 
 export interface OpenedIssues {
@@ -40,10 +42,9 @@ export interface ClosedIssues {
 
 export default async function basicFetch(username: string): Promise<User> {
   let data = await axios({
-    method: "post",
-    url: "https://api.github.com/graphql",
+    method: 'post',
+    url: 'https://api.github.com/graphql',
     headers: {
-      "User-Agent": "tuhinpal/readme-stats-github",
       Authorization: getRandomToken(true),
     },
     data: {
@@ -52,24 +53,16 @@ export default async function basicFetch(username: string): Promise<User> {
           name
           login
           avatarUrl
-          repositories(ownerAffiliations: OWNER, privacy: PUBLIC) {
-            totalCount
-          }
-          followers {
-            totalCount
-          }
-          following {
+          repositories {
             totalCount
           }
           contributionsCollection {
             totalCommitContributions
             restrictedContributionsCount
-          }
-          openedIssues: issues(states: OPEN) {
-            totalCount
-          }
-          closedIssues: issues(states: CLOSED) {
-            totalCount
+            totalPullRequestContributions
+            totalRepositoryContributions
+            totalRepositoriesWithContributedPullRequests
+            totalRepositoriesWithContributedCommits
           }
         }
       }`,

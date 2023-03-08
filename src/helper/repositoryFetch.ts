@@ -1,5 +1,5 @@
-import axios from "axios";
-import getRandomToken from "./getRandomToken";
+import axios from 'axios';
+import getRandomToken from './getRandomToken';
 
 type RepositoryData = {
   stars: number;
@@ -40,10 +40,9 @@ async function getPerPageReposData(
   pageno: number
 ): Promise<object> {
   let data = await axios({
-    method: "get",
+    method: 'get',
     url: `https://api.github.com/users/${username}/repos?page=${pageno}&per_page=100`,
     headers: {
-      "User-Agent": "tuhinpal/readme-stats-github",
       Authorization: getRandomToken(true),
     },
   });
