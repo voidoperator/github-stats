@@ -2,7 +2,7 @@
 
 ## Features 🌟
 
-- Accurate result
+- Accurate results
 - Refresh rate of 1800 seconds
 - Supports customization
 
